@@ -1,0 +1,78 @@
+:root {
+  --bg-primary : #021227;
+  --text-secondary: #309543;
+  --text-primary: #cccccc;
+  --font-Righteous : 'Righteous';
+  --font-Gentium: 'Gentium Book Plus'
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-primary);
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 0;
+  color: var(--text-primary);
+}
+p {
+  color: var(--text-primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-primary);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  font-size: 18px;
+  background-color: var(--text-secondary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005da3;
+}
+
+.example {
+  color: #2e2d2d;
+}
+
+#hasilSeleksi {
+  background-color: var(--text-primary);
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  margin-top: 2rem;
+}
