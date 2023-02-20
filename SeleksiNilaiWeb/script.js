@@ -7,7 +7,7 @@ function SeleksiNilai() {
   const dataArray = document
   .getElementById("data")
   .value.split(",");
-  Number(dataArray);
+  Number(dataArray)
   const containerResult = document.getElementById('hasilSeleksi');
   // Style Border
   if(nilaiAwal == '' && nilaiAkhir == '' && dataArray == '') {
@@ -30,23 +30,23 @@ function SeleksiNilai() {
   if(nilaiAwal.length > 0) {
     styleNilaiAwal.style.border = '0px'
   }
-  dataArray.forEach((e) => {
-    if(!isNaN(e)) {
+  dataArray.forEach((data) => {
+    if(Number(data)) {
+      // Validasi nilaiAwal harus kurang dari nilaiAkhir
+      if (nilaiAwal > nilaiAkhir) {
+        styleNilaiAwal.style.border = "2px solid red";
+        styleNilaiAkhir.style.border = "2px solid red";
+        styleArray.style.border = "0px";
+        containerResult.innerHTML = "Nilai akhir harus lebih besar dari nilai awal";
+        return;
+      }
       // Validasi jumlah data dalam dataArray harus lebih dari 5
-      if (dataArray.length <= 5) {
+      if (dataArray.length < 5) {
         styleNilaiAwal.style.border = "0px";
         styleNilaiAkhir.style.border = "0px";
-        styleArray.style.border = '2px solid red';
-        return (containerResult.innerHTML =
-          "Jumlah angka dalam data harus lebih dari 5");
-      }
-      // Validasi nilaiAwal harus kurang dari nilaiAkhir
-      if (nilaiAwal >= nilaiAkhir) {
-          styleNilaiAwal.style.border = "2px solid red";
-          styleNilaiAkhir.style.border = "2px solid red";
-          styleArray.style.border = "0";
-        return (containerResult.innerHTML =
-          "Nilai akhir harus lebih besar dari nilai awal");
+        styleArray.style.border = "2px solid red";
+        containerResult.innerHTML = "Jumlah angka dalam data harus lebih dari 5";
+        return;
       }
       // Filter data yang sesuai dengan kriteria dan urutkan
       const hasilSeleksi = dataArray
@@ -57,15 +57,15 @@ function SeleksiNilai() {
       if (hasilSeleksi.length > 0) {
         styleNilaiAwal.style.border = "0";
         styleNilaiAkhir.style.border = "0";
-        styleArray.style.border = '0px';
-        document.getElementById(
-          "hasilSeleksi"
-        ).innerHTML = `Hasil seleksi: ${hasilSeleksi}`;
+        styleArray.style.border = "0px";
+        containerResult.innerHTML = `Hasil seleksi: ${hasilSeleksi}`;
+        return;
       } else {
         styleNilaiAwal.style.border = "0";
         styleNilaiAkhir.style.border = "0";
-        styleArray.style.border = '0px';
-        return containerResult.innerHTML = "Nilai tidak ditemukan";
+        styleArray.style.border = "0px";
+        containerResult.innerHTML = "Nilai tidak ditemukan";
+        return
       }
     } else {
       styleNilaiAwal.style.border = "0";

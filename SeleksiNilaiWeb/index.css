@@ -10,6 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--bg-primary);
   margin: 0;
+  color: #fff;
 }
 
 .container {
@@ -30,7 +31,7 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  background-color: var(--text-primary);
+  background-color: var(--bg-primary);
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
@@ -66,13 +67,14 @@ button:hover {
 }
 
 .example {
-  color: #2e2d2d;
+  color: #e0e0e0;
 }
 
 #hasilSeleksi {
-  background-color: var(--text-primary);
+  background-color: var(--bg-primary);
   border-radius: 5px;
   padding: 2rem;
   box-shadow: 0 0 10px rgb(255, 255, 255);
   margin-top: 2rem;
+  color: #fff;
 }
