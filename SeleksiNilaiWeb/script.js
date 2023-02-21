@@ -37,16 +37,16 @@ function SeleksiNilai() {
     containerResult.innerHTML = "Nilai akhir harus lebih besar dari nilai awal";
     return;
   }
+  // Validasi jumlah data dalam dataArray harus lebih dari 5
+  if (dataArray.length < 5) {
+    styleNilaiAwal.style.border = "0px";
+    styleNilaiAkhir.style.border = "0px";
+    styleArray.style.border = "2px solid red";
+    containerResult.innerHTML = "Jumlah angka dalam data harus lebih dari 5";
+    return;
+  }
   dataArray.forEach((data) => {
     if(Number(data)) {
-      // Validasi jumlah data dalam dataArray harus lebih dari 5
-      if (dataArray.length < 5) {
-        styleNilaiAwal.style.border = "0px";
-        styleNilaiAkhir.style.border = "0px";
-        styleArray.style.border = "2px solid red";
-        containerResult.innerHTML = "Jumlah angka dalam data harus lebih dari 5";
-        return;
-      }
       // Filter data yang sesuai dengan kriteria dan urutkan
       const hasilSeleksi = dataArray
         .filter((data) => data > nilaiAwal && data < nilaiAkhir)
