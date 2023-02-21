@@ -16,6 +16,7 @@ const showMonth = (error, month) => {
   } else {
     const getAllMonth = month.map(month => month)
     console.log(getAllMonth)
+    return getAllMonth;
   }
 }
 

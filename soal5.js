@@ -15,10 +15,10 @@ let data = {
 
 const newData = {...data, name: "Redha Definto", email: "redhadefinto28@gmail.com", hobbies: "Ngoding"}
 
-// console.log(newData)
+console.log(newData)
 
 const result = newData.address;
-console.log(result)
+// console.log(result)
 
 const {street, city} = result;
 console.log(street)

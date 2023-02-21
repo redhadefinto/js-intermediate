@@ -26,20 +26,19 @@ function SeleksiNilai() {
     styleArray.style.border = '0px'
     return containerResult.innerHTML = 'Nilai harus di isi';
   }
-  console.log(nilaiAwal)
   if(nilaiAwal.length > 0) {
     styleNilaiAwal.style.border = '0px'
   }
+  // Validasi nilaiAwal harus kurang dari nilaiAkhir
+  if (nilaiAwal > nilaiAkhir) {
+    styleNilaiAwal.style.border = "2px solid red";
+    styleNilaiAkhir.style.border = "2px solid red";
+    styleArray.style.border = "0px";
+    containerResult.innerHTML = "Nilai akhir harus lebih besar dari nilai awal";
+    return;
+  }
   dataArray.forEach((data) => {
     if(Number(data)) {
-      // Validasi nilaiAwal harus kurang dari nilaiAkhir
-      if (nilaiAwal > nilaiAkhir) {
-        styleNilaiAwal.style.border = "2px solid red";
-        styleNilaiAkhir.style.border = "2px solid red";
-        styleArray.style.border = "0px";
-        containerResult.innerHTML = "Nilai akhir harus lebih besar dari nilai awal";
-        return;
-      }
       // Validasi jumlah data dalam dataArray harus lebih dari 5
       if (dataArray.length < 5) {
         styleNilaiAwal.style.border = "0px";

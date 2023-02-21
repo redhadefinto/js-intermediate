@@ -63,6 +63,7 @@ const cekLulus = (nilai) => {
 
 cekLulus(90).then((nilai) => {
   console.log(nilai)
+  return nilai
 }).catch((e) => {
   console.log(e.message)
 })

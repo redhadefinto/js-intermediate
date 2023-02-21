@@ -15,7 +15,7 @@ const cekHariKerja = (day) => {
 }
 
 cekHariKerja('senin').then((day) => {
-  return console.log(`hari ${day} hari kerja`);
+  return console.log(`Hari ${day} hari kerja`);
 }).catch((e) => {
   console.log(e.message)
 })
@@ -25,7 +25,7 @@ cekHariKerja('senin').then((day) => {
 const cekTryCatch = async (day) => {
   try {
     await cekHariKerja(day)
-    console.log(`hari ${day} hari kerja`)
+    console.log(`Hari ${day} hari kerja`)
   } catch (error) {
     console.log(error.message);
   }

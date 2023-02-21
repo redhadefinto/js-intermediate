@@ -3,11 +3,14 @@
 // concat akan menggabungkan 2 atau lebih array dan menghasilkan array baru
 // concat memiliki parameter sebanyak yang ingin di gabungkan (parameter1, parameter2, ....)
 const Numbers1 = [1,2,3];
-// console.log(Numbers1)
+console.log(`Concat`)
+console.log(`before 1`, Numbers1)
 const Numbers2 = [4,5,6];
-// console.log(Numbers2)
+console.log(`before 1`, Numbers2)
 const concatResult = Numbers1.concat(Numbers2);
-// console.log(concatResult)
+console.log(`after 1`, Numbers1)
+console.log(`after 1`, Numbers2)
+console.log(`output`, concatResult)
 // non mutasi
 // output akan menghasil array baru
 
@@ -17,9 +20,11 @@ const concatResult = Numbers1.concat(Numbers2);
 // every memiliki paramter yaitu (callback)
 // Method array
 const every = [5, 10, 3]
-// console.log(every)
+console.log(`every`)
+console.log(`before`, every)
 const everyResult = every.every(num => num > 2)
-// console.log(result)
+console.log(`after`, every)
+console.log(`output: `, everyResult)
 // nonmutasi
 // output akan menghasilkan nilai boolean
 
@@ -30,10 +35,11 @@ const everyResult = every.every(num => num > 2)
 // filter memiliki parameter yaitu (callback)
 // method array
 const Filter = [10, 5, 8, 2, 16, 1];
-// console.log(`Before: ${Filter}`)
+console.log(`filter`)
+console.log(`Before: `, Filter)
 const filterResult = Filter.filter(num => num > 12)
-// console.log(`After: ${Filter}`)
-// console.log(`Output: ${filterResult}`)
+console.log(`After: `, Filter)
+console.log(`Output:`, filterResult)
 // nonmutasi
 // output akan menghasilkan array baru sesuai kondisi tertentu
 
@@ -42,11 +48,12 @@ const filterResult = Filter.filter(num => num > 12)
 // jika kondisi tidak sesuai maka akan menghasilkan nilai undifined
 // find memiliki parameter yaitu (callback)
 // method array
-const Find = [2, 5, 8, 10, 16, 1];
-// console.log(`Before: ${Find}`)
-const findResult = Find.find(num => num > 50)
-// console.log(`After: ${Find}`)
-// console.log(findResult)
+const Find = [2, 5, 8, 11, 30, 1];
+console.log(`find`)
+console.log(`Before: `, Find)
+const findResult = Find.find(num => num > 10)
+console.log(`After: `, Find)
+console.log(`output`, findResult)
 // nonMutasi
 // output akan menghasilkan nilai baru
 
@@ -55,10 +62,11 @@ const findResult = Find.find(num => num > 50)
 // pop digunakan untuk menghapus isi terakhir dari array
 // mehtod array
 const country = ['indonesia', 'jepang', 'singapura']
-// console.log(`before: ${country}`);
+console.log(`pop`)
+console.log(`before: ${country}`);
 const resultPop = country.pop();
-// console.log(`After: ${country}`)
-// console.log(`output: ${country}`)
+console.log(`After: ${country}`)
+console.log(`output: `, country)
 // mutasi
 // output akan menghasilkan nilai kembalian dari array asalnya
 
@@ -66,6 +74,7 @@ const resultPop = country.pop();
 // array method
 // method ini digunakan untuk menghapus array dari urutan pertama
 const city = ['jakarta', 'padang', 'palembang'];
+// console.log(`shift`)
 // console.log(`before: ${city}`)
 const resultShift = city.shift()
 // console.log(`after: ${city}`)

@@ -26,6 +26,7 @@ const searchName = (input, limit, callback) => {
 
 const newResult = (result) => {
   console.log(result)
+  return result;
 }
 
 searchName('an', 3, newResult)
